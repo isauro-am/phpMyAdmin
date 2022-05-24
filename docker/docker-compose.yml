@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    # restart: always
+    environment:
+      PMA_HOST: ${DATABASE_HOST}
+      PMA_USER: ${DATABASE_USER}
+      PMA_PASSWORD: ${DATABASE_PASSWORD}
+    ports:
+      - "8080:80"
